@@ -26,9 +26,8 @@ ax2.set_xlabel("petal_width")
 plt.show()
 
 # As we can see from here, we can classify irises using the petal length and the petal width.
-X = df.drop('sepal_width', axis='columns')
-X=X.drop('sepal_length', axis='columns')
-X=X.drop('target', axis='columns')
+X = df.drop(['sepal_width','sepal_length','target'], axis='columns')
+
 Y=df.target
 
 X_train,X_test,Y_train,Y_test=train_test_split(X,Y,test_size=0.2)
